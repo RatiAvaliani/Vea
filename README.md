@@ -11,7 +11,17 @@
   ```
     let bodyLinks = `
     <div class="new-body">
-      <div> <div>
+      <ul class="link-list">
+        <li class="links"><a href="#">new Link</a></li>
+      </ul>
     </div>
-   ` 
-    $('body').append();
+   `;
+    $('body').append(bodyLinks);
+  ```
+##### Using this module
+  ```
+    (new Vea()).select('body').append('div').addClass('new-body')
+      .append('ul').addClass('link-list')
+      .append('li').addClass('links')
+      .append('a').addAttr('href', '#').text('new Link').enter();
+  ```
